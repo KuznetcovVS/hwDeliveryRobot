@@ -21,7 +21,6 @@ public class RobotDelivery {
 
         executor.shutdown();
         while (!executor.isTerminated()) {
-            // Ожидание завершения всех потоков
         }
 
         printResults();
@@ -65,7 +64,7 @@ public class RobotDelivery {
 
         System.out.println("Другие размеры:");
         for (Map.Entry<Integer, Integer> entry : sizeToFreq.entrySet()) {
-            if (entry.getKey() != mostFrequentCount) { // Исключаем самое частое
+            if (entry.getKey() != mostFrequentCount) {
                 System.out.println("- " + entry.getKey() + " (" + entry.getValue() + " раз)");
             }
         }
